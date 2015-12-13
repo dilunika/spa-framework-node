@@ -1,0 +1,24 @@
+<div class="ka-temperature-widget">
+
+    <div class="ka-temperature-heading">
+        <img class="ka-temperature-icon" ng-src="images/therm-icon.png" alt="thermometer" />
+        <span class="ka-temperature-title">Temp</span>
+    </div>
+
+    <div class="ka-temperature-body" style="background-image: url(/spa/images/{{selectedLocation.image}});">
+
+        <div ng-if="!isLoaded">
+            <i class="fa fa-refresh fa-spin fa-2x"></i>
+        </div>
+
+        <div ng-if="isLoaded" class="ka-temperature-view">
+            <div class="ka-temperature-river-name">
+                {{selectedLocation.name}}
+            </div>
+            <div class="ka-temperature-degrees">
+                {{selectedLocation.temperature}}º
+            </div>
+        </div>
+    </div>
+
+</div>

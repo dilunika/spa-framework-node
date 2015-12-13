@@ -1,0 +1,9 @@
+<div>
+    <ul class="spa-menu" ng-transclude></ul>
+    <a class="btn spa-menu-layout-button" ng-click="toggleMenuOrientation()"
+       ng-show="allowHorizontalToggle"
+       ng-class="{'spa-layout-button-horizontal': !isVertical}">
+        <i class="fa"
+           ng-class="{'fa-chevron-up': isVertical, 'fa-chevron-left': !isVertical}"></i>
+    </a>
+</div>

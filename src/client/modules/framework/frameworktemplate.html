@@ -1,0 +1,35 @@
+<div class="spa-title-bar">
+    <div class="row">
+        <div class="spa-logo-area col-sm-6">
+            <img class="spa-icon" ng-src="{{ iconFile }}" alt=""/>
+
+            <div class="spa-title-area">
+                <p class="spa-logo-title">{{ title }}</p>
+
+                <p class="spa-logo-subtitle">{{ subtitle }}</p>
+            </div>
+
+            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" class="spa-collapsed-menu pull-right">
+                <button class="btn spa-nav-button" type="button">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="spa-right-side-controls col-sm-6">
+            <spa-user-profile-small></spa-user-profile-small>
+        </div>
+    </div>
+</div>
+
+<div class="spa-menu-area"
+     ng-show="isMenuVisible"
+     ng-class="{'spa-menu-area-vertical': isMenuVertical, 'spa-menu-area-horizontal': !isMenuVertical}">
+     
+    <spa-user-profile></spa-user-profile>
+    <div ng-transclude></div>
+</div>
+
+<div class="spa-view" ng-view
+     ng-class="{'spa-view-full-width': !isMenuVertical || !isMenuVisible}"></div>

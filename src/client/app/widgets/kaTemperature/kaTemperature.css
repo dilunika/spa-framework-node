@@ -1,0 +1,60 @@
+
+.ka-temperature-widget {
+    height: 100%;
+    width: 100%;
+    min-height: 180px;
+    font-size: 16px;
+    color: black;
+}
+
+.ka-temperature-heading {
+    background-color: red;
+    color: white;
+    height: 32px;
+    padding-top: 2px;
+    font-size: 15px;
+    line-height: 32px;
+}
+
+.ka-temperature-title {
+
+}
+
+.ka-temperature-icon {
+    height: 24px;
+    width: 24px;
+    margin-top: -2px;
+}
+
+.ka-temperature-body {
+    position: relative;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+.ka-temperature-view {
+    background-color: rgba(255,255,255,.7);
+    position: absolute;
+    right: 10px;
+    bottom: 38px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.ka-temperature-river-name {
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.ka-temperature-degrees {
+    font-size: 64px;
+    margin-top: -20px;
+}
+

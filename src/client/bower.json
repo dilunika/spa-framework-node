@@ -1,0 +1,12 @@
+{
+  "name": "spa",
+  "version": "2.1.4",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0"
+  }
+}

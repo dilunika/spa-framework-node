@@ -1,0 +1,22 @@
+<div class="expenses-widget">
+
+    <div class="expenses-widget-header">
+        <i class="fa fa-credit-card expenses-widget-icon"></i>
+        <span class="expenses-widget-title">Expenses</span>
+    </div>
+
+    <div class="expenses-widget-body">
+        <table class="table table-striped table-responsive">
+            <tr>
+                <th>Date</th>
+                <th>Payee</th>
+                <th>Amount</th>
+            </tr>
+            <tr ng-repeat="expense in expenses">
+                <td>{{expense.date}}</td>
+                <td>{{expense.payee}}</td>
+                <td>{{expense.amount}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

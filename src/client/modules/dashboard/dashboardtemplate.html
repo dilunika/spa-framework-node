@@ -1,0 +1,27 @@
+<div class="spa-dashboard-header">
+    {{title}}
+    <div class="spa-dashboard-controls">
+
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-plus"></i>
+                Add Widget
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li ng-repeat="template in widgetDefinetions">
+                    <a role="menuitem" ng-click="addWidget(template)">{{template.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div gridster="gridsterOpts">
+    <ul>
+        <li gridster-item="widget" ng-repeat="widget in widgets">
+            <spa-widget-body></spa-widget-body>
+        </li>
+    </ul>
+</div>

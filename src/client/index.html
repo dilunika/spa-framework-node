@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SPA Framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="lib/angular-gridster/angular-gridster.min.css" />
+
+    <link href="app/app.css" rel="stylesheet">
+    <link href="modules/framework/framework.css" rel="stylesheet" />
+    <link rel="stylesheet" href="modules/menu/menu.css" />
+    <link rel="stylesheet" href="modules/dashboard/dashboard.css" />
+
+    <!-- Widgets CSS Files -->
+    <link rel="stylesheet" href="app/widgets/kaTemperature/kaTemperature.css" />
+    <link rel="stylesheet" href="app/widgets/expences/expenceswidgetstyles.css" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="lib/angular-animate.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="lib/angular-gridster/angular-gridster.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/ui-bootstrap-tpls-0.14.3.min.js"></script>
+    <script src="lib/ngStorage.min.js"></script>
+
+    <script src="modules/menu/menumodule.js"></script>
+    <script src="modules/menu/menuController.js"></script>
+    <script src="modules/menu/menudirective.js"></script>
+    <script src="modules/menu/menuitemdirective.js"></script>
+    <script src="modules/menu/menugroupdirective.js"></script>
+
+    <script src="modules/dashboard/dashboardmodule.js"></script>
+    <script src="modules/dashboard/dashboarddirective.js"></script>
+    <script src="modules/dashboard/widgetbodydirective.js"></script>
+
+    <script src="modules/framework/frameworkmodule.js"></script>
+    <script src="modules/framework/frameworkcontroller.js"></script>
+    <script src="modules/framework/userprofile/userprofiledirective.js"></script>
+    <script src="modules/framework/userprofile/userprofilesmalldirective.js"></script>
+    <script src="modules/framework/userprofile/signindirective.js"></script>
+    <script src="modules/framework/frameworkdirective.js"></script>
+
+    <script src="app/appmodule.js"></script>
+    <script src="app/approuteconfig.js"></script>
+    <script src="app/appdashboarddirective.js"></script>
+    <script src="app/guidesdirective.js"></script>
+    <script src="app/locationdirective.js"></script>
+    <script src="app/services/dataService.js"></script>
+    <script src="app/appcontroller.js"></script>
+
+    <!-- Widgets Javascript Files -->
+    <script src="app/widgets/kaTemperature/kaTemperatureDirective.js"></script>
+    <script src="app/widgets/expences/expenceswidgetdirective.js"></script>
+    <script src="app/dialogs/expensesWidgetSettingsController.js"></script>
+    <script src="app/dialogs/temperatureWidgetSettingsController.js"></script>
+
+</head>
+
+<body class="container-fluid" ng-controller="appController">
+
+    <div ng-switch="state">
+        <div ng-switch-when="unauthorized">
+            <spa-sign-in></spa-sign-in>
+        </div>
+
+        <div ng-switch-default>
+            <spa-framework title="Kithulgala Adventures" subtitle="Administrative App" icon-file="images/kayak-icon-flat.png">
+
+                <spa-menu>
+                    <spa-menu-item label="Dashboard" icon="fa-tachometer" route="dashboard"></spa-menu-item>
+                    <spa-menu-item label="Location" icon="fa-location-arrow" route="locations"></spa-menu-item>
+                    <spa-menu-item label="Raft Guides" icon="fa-user" route="guides"></spa-menu-item>
+                    <spa-menu-group label="Equipment" icon="fa-gears">
+                        <spa-menu-item label="Rafts" icon="fa-unlink" route="rafts"></spa-menu-item>
+                        <spa-menu-item label="Paddles" icon="fa-magic" route="paddles"></spa-menu-item>
+                        <spa-menu-item label="Life Vests" icon="fa-life-ring" route="vests"></spa-menu-item>
+                    </spa-menu-group>
+                </spa-menu>
+
+            </spa-framework>
+        </div>
+    </div>
+
+</body>
+
+</html>
