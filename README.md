@@ -8,8 +8,6 @@ A framework to build widgetized Single Page Applications using AngularJS. NodeJS
 ## Quick Start
 Clone this repo and run the content locally
 ```bash
-$ npm install
-$ bower install
 $ npm start
 ```
 
