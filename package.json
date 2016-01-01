@@ -1,15 +1,15 @@
 {
-  "name": "Pluralsight-Gulp",
-  "version": "0.1.0",
-  "description": "Starter Code for Pluralsight Course JavaScript Build Automation with Gulp.js",
+  "name": "SPA-Frmawork",
+  "version": "1.0.0",
+  "description": "A framework to build widgetized Single Page Applications using AngularJS. NodeJS has been used as the server platform. But SPA frameowork can be used with any other web server technology.",
   "authors": [
-    "John Papa"
+    "Kasun Dilunika"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/johnpapa/pluralsight-gulp",
+  "homepage": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/johnpapa/pluralsight-gulp.git"
+    "url": "https://github.com/dilunika/spa-framework-node.git"
   },
   "scripts": {
     "init": "npm install",
